@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B24AB5C9-C438-4466-BC2B-8481C23F9647}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CNotepad</RootNamespace>
+    <AssemblyName>CNotepad</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_cr.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWRDeleteItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWRDeleteItemForm.Designer.cs">
+      <DependentUpon>CWRDeleteItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWREditItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWREditItemForm.Designer.cs">
+      <DependentUpon>CWREditItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWRGetValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWRGetValueForm.Designer.cs">
+      <DependentUpon>CWRGetValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWRNewItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWRNewItemForm.Designer.cs">
+      <DependentUpon>CWRNewItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CWRViewAllItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CWRViewAllItemsForm.Designer.cs">
+      <DependentUpon>CWRViewAllItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileWork.cs" />
+    <Compile Include="HTMLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HTMLForm.Designer.cs">
+      <DependentUpon>HTMLForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CNotepad.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TextWork.cs" />
+    <Compile Include="ToGoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToGoForm.Designer.cs">
+      <DependentUpon>ToGoForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWRDeleteItemForm.resx">
+      <DependentUpon>CWRDeleteItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWREditItemForm.resx">
+      <DependentUpon>CWREditItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWRGetValueForm.resx">
+      <DependentUpon>CWRGetValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWRNewItemForm.resx">
+      <DependentUpon>CWRNewItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CWRViewAllItemsForm.resx">
+      <DependentUpon>CWRViewAllItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HTMLForm.resx">
+      <DependentUpon>HTMLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToGoForm.resx">
+      <DependentUpon>ToGoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\icon_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\edit_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\opp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\seAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\dateTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\reWord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\supp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\html.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\cwrL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\icon_c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="des\icon_cs+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+    <None Include="des\paste.jpg" />
+    <Content Include="icon_cr.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
